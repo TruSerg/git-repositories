@@ -5,9 +5,9 @@ const styles = () => ({
 
   userRepo: {
     border: "1px solid #000",
-    padding: "1rem",
+    padding: "0.5rem",
     maxWidth: "40rem",
-    marginBottom: "2rem",
+    marginBottom: "1rem",
   },
 });
 
