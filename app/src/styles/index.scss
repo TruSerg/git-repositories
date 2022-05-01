@@ -1,0 +1,11 @@
+@import "fonts";
+@import 'reset';
+
+html {
+  font-family: 'Inter', sans-serif;
+}
+
+::placeholder {
+  font-size: 1.2rem !important;
+  font-family: 'Inter', sans-serif !important;
+}

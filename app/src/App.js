@@ -1,11 +1,7 @@
 import InputSearch from "./components/InputSearch/inputSearch";
 
 const App = () => {
-  return (
-    <div>
-      <InputSearch />
-    </div>
-  );
+  return <InputSearch />;
 };
 
 export default App;

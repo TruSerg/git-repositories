@@ -29,6 +29,10 @@ const InputSearch = () => {
     });
   };
 
+  const handleUserSearch = (e) => {
+    setInputSearchUserName(e.target.value);
+  };
+
   const getUserName = async () => {
     setIsLoading(true);
 
@@ -36,7 +40,6 @@ const InputSearch = () => {
       await axios
         .get(`https://api.github.com/users/${inputSearchUserName}`)
         .then((res) => {
-          console.log(res.data);
           res.data.message ? setError(error.message) : setUserData(res.data);
           setError(null);
         });
@@ -48,10 +51,6 @@ const InputSearch = () => {
     setIsLoading(false);
   };
 
-  const handleUserSearch = (e) => {
-    setInputSearchUserName(e.target.value);
-  };
-
   const getUserRepos = async () => {
     setIsLoading(true);
 
@@ -59,7 +58,6 @@ const InputSearch = () => {
       await axios
         .get(`https://api.github.com/users/${inputSearchUserName}/repos`)
         .then((res) => {
-          console.log(res.data);
           setUserReposList(res.data);
         });
     } catch (error) {

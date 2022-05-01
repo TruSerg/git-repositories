@@ -2,7 +2,7 @@ import { withStyles } from "@mui/styles";
 
 import styles from "./styles";
 
-const UserDataLayout = ({
+const UserData = ({
   classes,
   name,
   login,
@@ -28,4 +28,4 @@ const UserDataLayout = ({
   );
 };
 
-export default withStyles(styles)(UserDataLayout);
+export default withStyles(styles)(UserData);

@@ -1,8 +1,9 @@
 import { withStyles } from "@mui/styles";
-import { CircularProgress } from "@mui/material";
 
-import UserDataLayout from "./userDataLayout";
-import UserReposLayout from "./userReposLayout";
+import UserData from "../UserData/userData";
+import UserRepos from "../UserRepos/userRepos";
+
+import CustomLoader from "../../commonComponents/CustomLoader";
 
 import styles from "./styles";
 
@@ -29,16 +30,16 @@ const InputSearchLayout = ({
       {isUserDataLoaded ? (
         <h1>Start with searching a GitHub user</h1>
       ) : (
-        <div>
+        <>
           {isLoading ? (
-            <CircularProgress />
+            <CustomLoader />
           ) : (
-            <div>
+            <>
               {error ? (
                 <h1>User not found</h1>
               ) : (
-                <div>
-                  <UserDataLayout
+                <>
+                  <UserData
                     name={name}
                     login={login}
                     url={url}
@@ -46,12 +47,12 @@ const InputSearchLayout = ({
                     following={following}
                     avatar={avatar}
                   />
-                  <UserReposLayout userReposList={userReposList} />
-                </div>
+                  <UserRepos userReposList={userReposList} />
+                </>
               )}
-            </div>
+            </>
           )}
-        </div>
+        </>
       )}
     </div>
   );
