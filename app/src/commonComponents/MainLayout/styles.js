@@ -1,6 +1,8 @@
 const styles = () => ({
   mainWrapper: {
     minHeight: "100vh",
+    color: "#000",
+    fontWeight: "400",
   },
 
   wrapper: {

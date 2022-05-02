@@ -2,6 +2,8 @@ import { withStyles } from "@mui/styles";
 
 import styles from "./styles";
 
+import sprite from "../../static/sprite.svg";
+
 const UserData = ({
   classes,
   name,
@@ -13,17 +15,23 @@ const UserData = ({
 }) => {
   return (
     <div>
-      <div>
-        <img className={classes.img} src={avatar} alt="photo" />
-      </div>
-      <p>{name}</p>
-      <p>
-        <a target="_blank" href={url}>
-          {login}
-        </a>
-      </p>
-      <p>followers {followers}</p>
-      <p>following {following}</p>
+      <img className={classes.img} src={avatar} alt="photo" />
+      <p className={classes.userName}>{name}</p>
+      <a target="_blank" href={url}>
+        <p className={classes.userLogin}>{login}</p>
+      </a>
+      <span>
+        <svg className={classes.userFollowersIcon}>
+          <use href={sprite + "#i-followers"} />
+        </svg>
+        {followers} followers
+      </span>
+      <span className={classes.userfollowing}>
+        <svg className={classes.userFollowingIcon}>
+          <use href={sprite + "#i-following"} />
+        </svg>
+        {following} following
+      </span>
     </div>
   );
 };

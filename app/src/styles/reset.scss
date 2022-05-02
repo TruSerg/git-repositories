@@ -1,4 +1,5 @@
-html {
+html, body {
+  height: 100%;
   box-sizing: border-box;
 }
 
@@ -6,6 +7,12 @@ html {
 *::before,
 *::after {
   box-sizing: inherit;
+}
+
+input {
+  outline: 0;
+  outline-offset: 0;
+  border: none ;
 }
 
 img {

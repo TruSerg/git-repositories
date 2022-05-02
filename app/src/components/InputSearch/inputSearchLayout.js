@@ -3,9 +3,11 @@ import { withStyles } from "@mui/styles";
 import UserData from "../UserData/userData";
 import UserRepos from "../UserRepos/userRepos";
 
-import CustomLoader from "../../commonComponents/CustomLoader";
+import Loader from "../../commonComponents/Loader";
 
 import styles from "./styles";
+
+import sprite from "../../static/sprite.svg";
 
 const InputSearchLayout = ({
   classes,
@@ -23,22 +25,36 @@ const InputSearchLayout = ({
   handleSubmit,
 }) => {
   return (
-    <div>
-      <form onSubmit={handleSubmit}>
-        <input type="text" onChange={handleChange} />
-      </form>
+    <>
+      <div className={classes.searchWrapper}>
+        <a target="_blank" href="https://github.com">
+          <svg className={classes.searchGitIcon}>
+            <use href={sprite + "#i-git"} />
+          </svg>
+        </a>
+        <form className={classes.searchForm} onSubmit={handleSubmit}>
+          <svg className={classes.searchIcon}>
+            <use href={sprite + "#i-search"} />
+          </svg>
+          <input
+            className={classes.searchInput}
+            type="text"
+            onChange={handleChange}
+          />
+        </form>
+      </div>
       {isUserDataLoaded ? (
         <h1>Start with searching a GitHub user</h1>
       ) : (
         <>
           {isLoading ? (
-            <CustomLoader />
+            <Loader />
           ) : (
             <>
               {error ? (
                 <h1>User not found</h1>
               ) : (
-                <>
+                <div className={classes.searchBodyArea}>
                   <UserData
                     name={name}
                     login={login}
@@ -48,13 +64,13 @@ const InputSearchLayout = ({
                     avatar={avatar}
                   />
                   <UserRepos userReposList={userReposList} />
-                </>
+                </div>
               )}
             </>
           )}
         </>
       )}
-    </div>
+    </>
   );
 };
 

@@ -4,6 +4,8 @@ import { ArrowBackIos, ArrowForwardIos } from "@mui/icons-material";
 
 import "./index.css";
 
+import sprite from "../../static/sprite.svg";
+
 const CustomPagination = ({ pages, currentPage }) => {
   const numberOfPages = [];
   for (let i = 1; i <= pages; i++) {
@@ -63,7 +65,9 @@ const CustomPagination = ({ pages, currentPage }) => {
           setCurrentButton((prev) => (prev <= 1 ? prev : prev - 1))
         }
       >
-        <ArrowBackIos fontSize="small" color="primary" />
+        <svg className="arrow-left">
+          <use href={sprite + "#i-left"} />
+        </svg>
       </a>
 
       {arrOfCurrButtons.map((item, index) => {
@@ -90,7 +94,9 @@ const CustomPagination = ({ pages, currentPage }) => {
           )
         }
       >
-        <ArrowForwardIos fontSize="small" color="primary" />
+        <svg className="arrow-right">
+          <use href={sprite + "#i-right"} />
+        </svg>
       </a>
     </div>
   );
