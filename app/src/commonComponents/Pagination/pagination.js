@@ -1,12 +1,9 @@
 import { useState, useEffect } from "react";
 import { memo } from "react";
-import { ArrowBackIos, ArrowForwardIos } from "@mui/icons-material";
 
-import "./index.css";
+import PaginationLayout from "./paginationLayout";
 
-import sprite from "../../static/sprite.svg";
-
-const CustomPagination = ({ pages, currentPage }) => {
+const Pagination = ({ pages, currentPage }) => {
   const numberOfPages = [];
   for (let i = 1; i <= pages; i++) {
     numberOfPages.push(i);
@@ -57,49 +54,13 @@ const CustomPagination = ({ pages, currentPage }) => {
   }, [currentButton, arrOfCurrButtons]);
 
   return (
-    <div className="pagination-container">
-      <a
-        href="#"
-        className={`${currentButton === 1 ? "disabled" : ""}`}
-        onClick={() =>
-          setCurrentButton((prev) => (prev <= 1 ? prev : prev - 1))
-        }
-      >
-        <svg className="arrow-left">
-          <use href={sprite + "#i-left"} />
-        </svg>
-      </a>
-
-      {arrOfCurrButtons.map((item, index) => {
-        return (
-          <a
-            href="#"
-            key={index}
-            className={`${currentButton === item ? "active" : ""}`}
-            onClick={() => setCurrentButton(item)}
-          >
-            {item}
-          </a>
-        );
-      })}
-
-      <a
-        href="#"
-        className={`${
-          currentButton === numberOfPages.length ? "disabled" : ""
-        }`}
-        onClick={() =>
-          setCurrentButton((prev) =>
-            prev >= numberOfPages.length ? prev : prev + 1
-          )
-        }
-      >
-        <svg className="arrow-right">
-          <use href={sprite + "#i-right"} />
-        </svg>
-      </a>
-    </div>
+    <PaginationLayout
+      currentButton={currentButton}
+      setCurrentButton={setCurrentButton}
+      arrOfCurrButtons={arrOfCurrButtons}
+      numberOfPages={numberOfPages}
+    />
   );
 };
 
-export default memo(CustomPagination);
+export default memo(Pagination);

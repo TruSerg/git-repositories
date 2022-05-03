@@ -19,7 +19,10 @@ const UserRepos = ({ userReposList }) => {
 
   return (
     <UserReposLayout
+      indexOfLastRepo={indexOfLastRepo}
+      indexOfFirstRepo={indexOfFirstRepo}
       userReposList={userReposList}
+      currentPage={currentPage}
       setCurrentPage={setCurrentPage}
       currentReposList={currentReposList}
       howManyPages={howManyPages}

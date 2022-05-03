@@ -1,15 +1,50 @@
 const styles = () => ({
+  userWrapper: {
+    display: "flex",
+    flexDirection: "column",
+
+    ["@media (max-width: 880px)"]: {
+      flexDirection: "row",
+      alignItems: "center",
+      justifyContent: "space-around",
+    },
+
+    ["@media (max-width: 490px)"]: {
+      display: "block",
+      marginBottom: "30px",
+      textAlign: "center",
+    },
+  },
+
   img: {
     borderRadius: "50%",
-    width: "280px",
-    height: "280px",
+    display: "block",
+    maxWidth: "280px",
+    height: "auto",
     marginBottom: "29px",
+
+    ["@media (max-width: 880px)"]: {
+      marginRight: "20px",
+    },
+
+    ["@media (max-width: 590px)"]: {
+      maxWidth: "200px",
+    },
+
+    ["@media (max-width: 490px)"]: {
+      margin: "0 auto",
+      marginBottom: "20px",
+    },
   },
 
   userName: {
     fontWeight: "600",
     fontSize: "26px",
     marginBottom: "2px",
+
+    ["@media (max-width: 490px)"]: {
+      fontSize: "24px",
+    },
   },
 
   userLogin: {
@@ -24,6 +59,15 @@ const styles = () => ({
     },
   },
 
+  userSocial: {
+    display: "flex",
+    alignItems: "center",
+
+    ["@media (max-width: 1090px)"]: {
+      display: "block",
+    },
+  },
+
   userFollowersIcon: {
     fill: "#808080",
     width: "23px",
@@ -31,8 +75,18 @@ const styles = () => ({
     marginRight: "12px",
   },
 
+  userFollowers: {
+    ["@media (max-width: 1090px)"]: {
+      marginBottom: "10px",
+    },
+  },
+
   userfollowing: {
     marginLeft: "20px",
+
+    ["@media (max-width: 1090px)"]: {
+      marginLeft: "0",
+    },
   },
 
   userFollowingIcon: {

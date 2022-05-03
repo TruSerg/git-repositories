@@ -4,16 +4,26 @@ const styles = () => ({
     flexDirection: "column",
     width: "70%",
     marginLeft: "30px",
+
+    ["@media (max-width: 880px)"]: {
+      width: "100%",
+      margin: "0 auto",
+    },
   },
 
   reposTitle: {
     fontWeight: "600",
     fontSize: "32px",
     marginBottom: "29px",
+
+    ["@media (max-width: 490px)"]: {
+      fontSize: "24px",
+      textAlign: "center",
+      marginBottom: "20px",
+    },
   },
 
   userRepo: {
-    boxSizing: "border-box",
     maxWidth: "877px",
     width: "100%",
     minHeight: "112px",
@@ -21,6 +31,15 @@ const styles = () => ({
     borderRadius: "6px",
     marginBottom: "24px",
     backgroundColor: "#fff",
+
+    ["@media (max-width: 880px)"]: {
+      width: "100%",
+    },
+
+    ["@media (max-width: 490px)"]: {
+      padding: "10px",
+      marginBottom: "20px",
+    },
   },
 
   repoName: {
@@ -34,10 +53,35 @@ const styles = () => ({
     "&:hover": {
       color: "#05438b",
     },
+
+    ["@media (max-width: 490px)"]: {
+      fontSize: "21px",
+    },
   },
 
   repoDescription: {
     fontSize: "16px",
+  },
+
+  paginationArea: {
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "flex-end",
+    marginTop: "auto",
+
+    ["@media (max-width: 880px)"]: {
+      flexDirection: "column",
+      margin: "0 auto",
+    },
+  },
+
+  paginationData: {
+    fontSize: "14px",
+    color: "#808080",
+
+    ["@media (max-width: 880px)"]: {
+      marginBottom: "20px",
+    },
   },
 });
 

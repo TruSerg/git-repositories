@@ -1,11 +1,14 @@
 import { withStyles } from "@mui/styles";
+import PropTypes from "prop-types";
 
-import Pagination from "../../commonComponents/Pagination";
+import Pagination from "../../commonComponents/Pagination/pagination";
 
 import styles from "./styles";
 
 const UserReposLayout = ({
   classes,
+  indexOfFirstRepo,
+  indexOfLastRepo,
   userReposList,
   setCurrentPage,
   currentReposList,
@@ -30,11 +33,27 @@ const UserReposLayout = ({
       ) : (
         <h1>No repos</h1>
       )}
+
       {userReposList.length > 4 && (
-        <Pagination pages={howManyPages} currentPage={setCurrentPage} />
+        <div className={classes.paginationArea}>
+          <span className={classes.paginationData}>{`${
+            indexOfFirstRepo + 1
+          } - ${indexOfLastRepo} of ${userReposList.length} items`}</span>
+          <Pagination pages={howManyPages} currentPage={setCurrentPage} />
+        </div>
       )}
     </div>
   );
+};
+
+UserReposLayout.propTypes = {
+  userReposList: PropTypes.arrayOf(PropTypes.object).isRequired,
+  currentReposList: PropTypes.arrayOf(PropTypes.object).isRequired,
+  indexOfFirstRepo: PropTypes.number.isRequired,
+  indexOfLastRepo: PropTypes.number.isRequired,
+  currentPage: PropTypes.number.isRequired,
+  howManyPages: PropTypes.number.isRequired,
+  setCurrentPage: PropTypes.func.isRequired,
 };
 
 export default withStyles(styles)(UserReposLayout);

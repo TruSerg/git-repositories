@@ -2,6 +2,7 @@ import { withStyles } from "@mui/styles";
 
 import UserData from "../UserData/userData";
 import UserRepos from "../UserRepos/userRepos";
+import PropTypes from "prop-types";
 
 import Loader from "../../commonComponents/Loader";
 
@@ -72,6 +73,21 @@ const InputSearchLayout = ({
       )}
     </>
   );
+};
+
+InputSearchLayout.propTypes = {
+  userReposList: PropTypes.arrayOf(PropTypes.object).isRequired,
+  error: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  login: PropTypes.string.isRequired,
+  url: PropTypes.string.isRequired,
+  avatar: PropTypes.string.isRequired,
+  followers: PropTypes.number.isRequired,
+  following: PropTypes.number.isRequired,
+  isLoading: PropTypes.bool.isRequired,
+  isUserDataLoaded: PropTypes.bool.isRequired,
+  handleChange: PropTypes.func.isRequired,
+  handleSubmit: PropTypes.func.isRequired,
 };
 
 export default withStyles(styles)(InputSearchLayout);

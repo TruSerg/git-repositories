@@ -5,6 +5,10 @@ const styles = () => ({
     minHeight: "72px",
     maxWidth: "100%",
     backgroundColor: "#0064EB",
+
+    ["@media (max-width: 490px)"]: {
+      justifyContent: "center",
+    },
   },
 
   searchGitIcon: {
@@ -16,6 +20,10 @@ const styles = () => ({
 
     "&:hover": {
       fill: "#515050",
+    },
+
+    ["@media (max-width: 490px)"]: {
+      marginLeft: "0",
     },
   },
 
@@ -40,6 +48,19 @@ const styles = () => ({
     marginLeft: "22px",
     padding: "8px 44px",
     fontSize: "14px",
+
+    ["@media (max-width: 880px)"]: {
+      minWidth: "400px",
+    },
+
+    ["@media (max-width: 590px)"]: {
+      minWidth: "300px",
+    },
+
+    ["@media (max-width: 490px)"]: {
+      maxWidth: "200px",
+      minWidth: "0",
+    },
   },
 
   searchBodyArea: {
@@ -48,6 +69,18 @@ const styles = () => ({
     minHeight: "696px",
     backgroundColor: "#E5E5E5",
     padding: "28px 57px",
+
+    ["@media (max-width: 1090px)"]: {
+      padding: "28px 28px",
+    },
+
+    ["@media (max-width: 880px)"]: {
+      display: "block",
+    },
+
+    ["@media (max-width: 590px)"]: {
+      padding: "30px 10px",
+    },
   },
 });
 
