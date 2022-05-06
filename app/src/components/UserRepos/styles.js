@@ -37,6 +37,7 @@ const styles = () => ({
     },
 
     ["@media (max-width: 490px)"]: {
+      minHeight: "80px",
       padding: "10px",
       marginBottom: "20px",
     },
@@ -45,6 +46,7 @@ const styles = () => ({
   repoName: {
     fontWeight: "500",
     fontSize: "24px",
+    lineHeight: "29px",
     marginBottom: "6px",
     color: "#0064EB",
     padding: "10px 0",
@@ -60,6 +62,7 @@ const styles = () => ({
   },
 
   repoDescription: {
+    lineHeight: "19px",
     fontSize: "16px",
   },
 

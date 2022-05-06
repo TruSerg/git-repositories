@@ -8,6 +8,7 @@ const styles = () => ({
 
     ["@media (max-width: 490px)"]: {
       justifyContent: "center",
+      padding: "0 10px 0 10px",
     },
   },
 
@@ -39,6 +40,10 @@ const styles = () => ({
     left: "40px",
     top: "50%",
     transform: "translateY(-50%)",
+
+    ["@media (max-width: 490px)"]: {
+      left: "35px",
+    },
   },
 
   searchInput: {
@@ -48,6 +53,8 @@ const styles = () => ({
     marginLeft: "22px",
     padding: "8px 44px",
     fontSize: "14px",
+    letterSpacing: "0.01em",
+    color: "#808080",
 
     ["@media (max-width: 880px)"]: {
       minWidth: "400px",
@@ -60,6 +67,7 @@ const styles = () => ({
     ["@media (max-width: 490px)"]: {
       maxWidth: "200px",
       minWidth: "0",
+      padding: "8px 8px 8px 35px",
     },
   },
 
@@ -81,6 +89,15 @@ const styles = () => ({
     ["@media (max-width: 590px)"]: {
       padding: "30px 10px",
     },
+  },
+
+  searchLoader: {
+    margin: "0 auto",
+    position: "absolute",
+    top: "50%",
+    left: "50%",
+    marginRight: "-50%",
+    transform: "translate(-50%, -50%)",
   },
 });
 

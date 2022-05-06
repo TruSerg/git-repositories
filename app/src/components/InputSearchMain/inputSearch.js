@@ -5,7 +5,7 @@ import InputSearchLayout from "./inputSearchLayout";
 
 const InputSearch = () => {
   const [inputSearchUserName, setInputSearchUserName] = useState("");
-  const [user, setUser] = useState("");
+  const [user, setUser] = useState({});
   const [userReposList, setUserReposList] = useState([]);
   const [error, setError] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
@@ -81,6 +81,7 @@ const InputSearch = () => {
     getUserName();
     getUserRepos();
 
+    setInputSearchUserName("");
     setIsUserDataLoaded(false);
   };
 
@@ -90,6 +91,7 @@ const InputSearch = () => {
         error={error}
         isLoading={isLoading}
         isUserDataLoaded={isUserDataLoaded}
+        inputSearchUserName={inputSearchUserName}
         name={user.name}
         login={user.login}
         url={user.url}

@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+import { memo } from "react";
 
 import sprite from "../../static/sprite.svg";
 
@@ -65,4 +66,4 @@ PaginationLayout.propTypes = {
   numberOfPages: PropTypes.arrayOf(PropTypes.number).isRequired,
 };
 
-export default PaginationLayout;
+export default memo(PaginationLayout);

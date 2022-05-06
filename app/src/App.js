@@ -1,4 +1,4 @@
-import InputSearch from "./components/InputSearch/inputSearch";
+import InputSearch from "./components/InputSearchMain/inputSearch";
 
 const App = () => {
   return <InputSearch />;

@@ -1,7 +1,8 @@
+import { memo } from "react";
 import { CircularProgress } from "@mui/material";
 
-const CustomLoader = () => {
+const Loader = () => {
   return <CircularProgress />;
 };
 
-export default CustomLoader;
+export default memo(Loader);

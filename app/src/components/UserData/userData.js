@@ -44,12 +44,12 @@ const UserData = ({
 };
 
 UserData.propTypes = {
-  name: PropTypes.string.isRequired,
-  login: PropTypes.string.isRequired,
-  url: PropTypes.string.isRequired,
-  avatar: PropTypes.string.isRequired,
-  following: PropTypes.number.isRequired,
-  followers: PropTypes.number.isRequired,
+  name: PropTypes.string,
+  login: PropTypes.string,
+  url: PropTypes.string,
+  avatar: PropTypes.string,
+  following: PropTypes.number,
+  followers: PropTypes.number,
 };
 
 export default withStyles(styles)(UserData);
