@@ -27,6 +27,7 @@ const styles = () => ({
     maxWidth: "877px",
     width: "100%",
     minHeight: "112px",
+    wordWrap: "break-word",
     padding: "14px 32px 24px 32px",
     borderRadius: "6px",
     marginBottom: "24px",

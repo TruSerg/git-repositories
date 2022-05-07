@@ -70,6 +70,7 @@ UserReposLayout.propTypes = {
   ),
   indexOfFirstRepo: PropTypes.number.isRequired,
   indexOfLastRepo: PropTypes.number.isRequired,
+  currentQuantityRepos: PropTypes.number.isRequired,
   currentPage: PropTypes.number.isRequired,
   totalPages: PropTypes.number.isRequired,
   setCurrentPage: PropTypes.func.isRequired,
