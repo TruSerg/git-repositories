@@ -1,13 +1,16 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import { memo } from "react";
 
 import PaginationLayout from "./paginationLayout";
 
 const Pagination = ({ pages, currentPage }) => {
   const numberOfPages = [];
-  for (let i = 1; i <= pages; i++) {
-    numberOfPages.push(i);
-  }
+
+  useMemo(() => {
+    for (let i = 1; i <= pages; i++) {
+      numberOfPages.push(i);
+    }
+  }, [numberOfPages]);
 
   const [currentButton, setCurrentButton] = useState(1);
 
