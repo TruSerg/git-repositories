@@ -31,7 +31,7 @@ const InputSearchLayout = ({
   return (
     <>
       <div className={classes.searchWrapper}>
-        <a target="_blank" href="https://github.com">
+        <a target="_blank" rel="noreferrer" href="https://github.com">
           <svg className={classes.searchGitIcon}>
             <use href={sprite + "#i-git"} />
           </svg>

@@ -26,7 +26,7 @@ const UserReposLayout = ({
         currentReposList.map(({ id, name, description, html_url }) => {
           return (
             <div className={classes.userRepo} key={id}>
-              <a target="_blank" href={html_url}>
+              <a target="_blank" rel="noreferrer" href={html_url}>
                 <p className={classes.repoName}>{name}</p>
               </a>
               <p className={classes.repoDescription}>{description}</p>

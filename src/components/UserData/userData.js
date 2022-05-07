@@ -17,11 +17,11 @@ const UserData = ({
   return (
     <div className={classes.userWrapper}>
       <div>
-        <img className={classes.img} src={avatar} alt="photo" />
+        <img className={classes.img} src={avatar} />
       </div>
       <div>
         <p className={classes.userName}>{name}</p>
-        <a target="_blank" href={url}>
+        <a target="_blank" rel="noreferrer" href={url}>
           <p className={classes.userLogin}>{login}</p>
         </a>
         <div className={classes.userSocial}>

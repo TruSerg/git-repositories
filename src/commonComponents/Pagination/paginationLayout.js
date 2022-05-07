@@ -15,7 +15,6 @@ const PaginationLayout = ({
     <div>
       <div className="pagination-container">
         <a
-          href="#"
           className={`${currentButton === 1 ? "disabled" : ""}`}
           onClick={() =>
             setCurrentButton((prev) => (prev <= 1 ? prev : prev - 1))
@@ -29,7 +28,6 @@ const PaginationLayout = ({
         {arrOfCurrButtons.map((item, index) => {
           return (
             <a
-              href="#"
               key={index}
               className={`${currentButton === item ? "active" : ""}`}
               onClick={() => setCurrentButton(item)}
@@ -40,7 +38,6 @@ const PaginationLayout = ({
         })}
 
         <a
-          href="#"
           className={`${
             currentButton === numberOfPages.length ? "disabled" : ""
           }`}
