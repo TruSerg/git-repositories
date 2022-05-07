@@ -51,7 +51,7 @@ const Pagination = ({ pages, currentPage }) => {
 
     setArrOfCurrButtons(tempNumberOfPages);
     currentPage(currentButton);
-  }, [currentButton, arrOfCurrButtons]);
+  }, [currentButton]);
 
   return (
     <PaginationLayout
