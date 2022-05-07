@@ -15,7 +15,9 @@ const UserRepos = ({ userReposList }) => {
     indexOfLastRepo
   );
 
-  const howManyPages = Math.ceil(userReposList.length / reposPerPage);
+  const currentQuantityRepos = indexOfFirstRepo + 1 * currentReposList.length;
+
+  const totalPages = Math.ceil(userReposList.length / reposPerPage);
 
   return (
     <UserReposLayout
@@ -25,7 +27,8 @@ const UserRepos = ({ userReposList }) => {
       currentPage={currentPage}
       setCurrentPage={setCurrentPage}
       currentReposList={currentReposList}
-      howManyPages={howManyPages}
+      currentQuantityRepos={currentQuantityRepos}
+      totalPages={totalPages}
     />
   );
 };

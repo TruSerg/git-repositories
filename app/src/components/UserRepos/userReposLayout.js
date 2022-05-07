@@ -9,17 +9,17 @@ import styles from "./styles";
 const UserReposLayout = ({
   classes,
   indexOfFirstRepo,
-  indexOfLastRepo,
   userReposList,
   setCurrentPage,
   currentReposList,
-  howManyPages,
+  currentQuantityRepos,
+  totalPages,
 }) => {
   return (
     <div className={classes.reposWrapper}>
       {userReposList.length > 1 && (
         <h3 className={classes.reposTitle}>
-          Repositories {`${userReposList.length}`}
+          Repositories ({userReposList.length})
         </h3>
       )}
       {userReposList.length ? (
@@ -41,8 +41,8 @@ const UserReposLayout = ({
         <div className={classes.paginationArea}>
           <span className={classes.paginationData}>{`${
             indexOfFirstRepo + 1
-          } - ${indexOfLastRepo} of ${userReposList.length} items`}</span>
-          <Pagination pages={howManyPages} currentPage={setCurrentPage} />
+          } - ${currentQuantityRepos} of ${userReposList.length} items`}</span>
+          <Pagination pages={totalPages} currentPage={setCurrentPage} />
         </div>
       )}
     </div>
@@ -52,28 +52,26 @@ const UserReposLayout = ({
 UserReposLayout.propTypes = {
   userReposList: PropTypes.arrayOf(
     PropTypes.shape({
-      name: PropTypes.string.isRequired,
-      login: PropTypes.string.isRequired,
-      url: PropTypes.string.isRequired,
-      avatar: PropTypes.string.isRequired,
-      followers: PropTypes.number.isRequired,
-      following: PropTypes.number.isRequired,
+      name: PropTypes.string,
+      login: PropTypes.string,
+      url: PropTypes.string,
+      avatar: PropTypes.string,
+      followers: PropTypes.number,
+      following: PropTypes.number,
     })
   ),
   currentReposList: PropTypes.arrayOf(
     PropTypes.shape({
+      id: PropTypes.number.isRequired,
       name: PropTypes.string.isRequired,
-      login: PropTypes.string.isRequired,
-      url: PropTypes.string.isRequired,
-      avatar: PropTypes.string.isRequired,
-      followers: PropTypes.number.isRequired,
-      following: PropTypes.number.isRequired,
+      description: PropTypes.string,
+      html_url: PropTypes.string.isRequired,
     })
   ),
   indexOfFirstRepo: PropTypes.number.isRequired,
   indexOfLastRepo: PropTypes.number.isRequired,
   currentPage: PropTypes.number.isRequired,
-  howManyPages: PropTypes.number.isRequired,
+  totalPages: PropTypes.number.isRequired,
   setCurrentPage: PropTypes.func.isRequired,
 };
 

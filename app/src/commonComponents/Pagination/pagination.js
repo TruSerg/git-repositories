@@ -49,7 +49,6 @@ const Pagination = ({ pages, currentPage }) => {
       setCurrentButton(arrOfCurrButtons[3] - 2);
     }
 
-    console.log(arrOfCurrButtons);
     setArrOfCurrButtons(tempNumberOfPages);
     currentPage(currentButton);
   }, [currentButton, arrOfCurrButtons]);

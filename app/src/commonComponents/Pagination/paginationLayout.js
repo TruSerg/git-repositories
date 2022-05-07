@@ -62,7 +62,7 @@ const PaginationLayout = ({
 PaginationLayout.propTypes = {
   currentButton: PropTypes.number.isRequired,
   setCurrentButton: PropTypes.func.isRequired,
-  arrOfCurrButtons: PropTypes.arrayOf(PropTypes.number).isRequired,
+  arrOfCurrButtons: PropTypes.array.isRequired,
   numberOfPages: PropTypes.arrayOf(PropTypes.number).isRequired,
 };
 

@@ -85,15 +85,15 @@ const InputSearchLayout = ({
 InputSearchLayout.propTypes = {
   userReposList: PropTypes.arrayOf(
     PropTypes.shape({
-      name: PropTypes.string.isRequired,
-      login: PropTypes.string.isRequired,
-      url: PropTypes.string.isRequired,
-      avatar: PropTypes.string.isRequired,
-      followers: PropTypes.number.isRequired,
-      following: PropTypes.number.isRequired,
+      name: PropTypes.string,
+      login: PropTypes.string,
+      url: PropTypes.string,
+      avatar: PropTypes.string,
+      followers: PropTypes.number,
+      following: PropTypes.number,
     })
   ),
-  error: PropTypes.string.isRequired,
+  error: PropTypes.string,
   isLoading: PropTypes.bool.isRequired,
   isUserDataLoaded: PropTypes.bool.isRequired,
   handleChange: PropTypes.func.isRequired,
