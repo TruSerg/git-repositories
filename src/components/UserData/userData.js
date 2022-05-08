@@ -17,7 +17,7 @@ const UserData = ({
   return (
     <div className={classes.userWrapper}>
       <div>
-        <img className={classes.img} src={avatar} alt="photo" />
+        <img className={classes.img} src={avatar} alt="" />
       </div>
       <div>
         <p className={classes.userName}>{name}</p>
