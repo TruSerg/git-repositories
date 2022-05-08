@@ -1,4 +1,4 @@
-import { useState, useEffect, useMemo } from "react";
+import { useState, useEffect } from "react";
 import { memo } from "react";
 
 import PaginationLayout from "./paginationLayout";
@@ -52,7 +52,7 @@ const Pagination = ({ pages, currentPage }) => {
 
     setArrOfCurrButtons(tempNumberOfPages);
     currentPage(currentButton);
-  }, [currentPage, currentButton, arrOfCurrButtons, numberOfPages]);
+  }, [currentPage, currentButton, arrOfCurrButtons]);
 
   console.log(numberOfPages);
 
