@@ -19,7 +19,7 @@ const styles = () => ({
     height: "66px",
     marginBottom: "47px",
 
-    ["@media (max-width: 490px)"]: {
+    "@media (max-width: 490px)": {
       width: "46px",
       height: "46px",
     },
@@ -29,7 +29,7 @@ const styles = () => ({
     fontSize: "22px",
     color: "#808080",
 
-    ["@media (max-width: 490px)"]: {
+    "@media (max-width: 490px)": {
       fontSize: "18px",
     },
   },

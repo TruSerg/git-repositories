@@ -6,11 +6,9 @@ import PaginationLayout from "./paginationLayout";
 const Pagination = ({ pages, currentPage }) => {
   const numberOfPages = [];
 
-  useMemo(() => {
-    for (let i = 1; i <= pages; i++) {
-      numberOfPages.push(i);
-    }
-  }, [numberOfPages]);
+  for (let i = 1; i <= pages; i++) {
+    numberOfPages.push(i);
+  }
 
   const [currentButton, setCurrentButton] = useState(1);
 

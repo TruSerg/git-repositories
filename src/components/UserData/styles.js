@@ -3,13 +3,13 @@ const styles = () => ({
     display: "flex",
     flexDirection: "column",
 
-    ["@media (max-width: 880px)"]: {
+    "@media (max-width: 880px)": {
       flexDirection: "row",
       alignItems: "center",
       justifyContent: "space-around",
     },
 
-    ["@media (max-width: 490px)"]: {
+    "@media (max-width: 490px)": {
       display: "block",
       marginBottom: "30px",
       textAlign: "center",
@@ -23,15 +23,15 @@ const styles = () => ({
     height: "auto",
     marginBottom: "29px",
 
-    ["@media (max-width: 880px)"]: {
+    "@media (max-width: 880px)": {
       marginRight: "20px",
     },
 
-    ["@media (max-width: 590px)"]: {
+    "@media (max-width: 590px)": {
       maxWidth: "200px",
     },
 
-    ["@media (max-width: 490px)"]: {
+    "@media (max-width: 490px)": {
       margin: "0 auto",
       marginBottom: "20px",
     },
@@ -42,7 +42,7 @@ const styles = () => ({
     fontSize: "26px",
     marginBottom: "2px",
 
-    ["@media (max-width: 490px)"]: {
+    "@media (max-width: 490px)": {
       fontSize: "24px",
     },
   },
@@ -63,7 +63,7 @@ const styles = () => ({
     display: "flex",
     alignItems: "center",
 
-    ["@media (max-width: 1090px)"]: {
+    "@media (max-width: 1090px)": {
       display: "block",
     },
   },
@@ -76,7 +76,7 @@ const styles = () => ({
   },
 
   userFollowers: {
-    ["@media (max-width: 1090px)"]: {
+    "@media (max-width: 1090px)": {
       marginBottom: "10px",
     },
   },
@@ -84,7 +84,7 @@ const styles = () => ({
   userfollowing: {
     marginLeft: "20px",
 
-    ["@media (max-width: 1090px)"]: {
+    "@media (max-width: 1090px)": {
       marginLeft: "0",
     },
   },

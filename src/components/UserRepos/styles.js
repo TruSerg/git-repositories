@@ -5,7 +5,7 @@ const styles = () => ({
     width: "70%",
     marginLeft: "30px",
 
-    ["@media (max-width: 880px)"]: {
+    "@media (max-width: 880px)": {
       width: "100%",
       margin: "0 auto",
     },
@@ -16,7 +16,7 @@ const styles = () => ({
     fontSize: "32px",
     marginBottom: "29px",
 
-    ["@media (max-width: 490px)"]: {
+    "@media (max-width: 490px)": {
       fontSize: "24px",
       textAlign: "center",
       marginBottom: "20px",
@@ -33,11 +33,11 @@ const styles = () => ({
     marginBottom: "24px",
     backgroundColor: "#fff",
 
-    ["@media (max-width: 880px)"]: {
+    "@media (max-width: 880px)": {
       width: "100%",
     },
 
-    ["@media (max-width: 490px)"]: {
+    "@media (max-width: 490px)": {
       minHeight: "80px",
       padding: "10px",
       marginBottom: "20px",
@@ -57,7 +57,7 @@ const styles = () => ({
       color: "#05438b",
     },
 
-    ["@media (max-width: 490px)"]: {
+    "@media (max-width: 490px)": {
       fontSize: "21px",
     },
   },
@@ -73,7 +73,7 @@ const styles = () => ({
     justifyContent: "flex-end",
     marginTop: "auto",
 
-    ["@media (max-width: 880px)"]: {
+    "@media (max-width: 880px)": {
       flexDirection: "column",
       margin: "0 auto",
     },
@@ -83,7 +83,7 @@ const styles = () => ({
     fontSize: "14px",
     color: "#808080",
 
-    ["@media (max-width: 880px)"]: {
+    "@media (max-width: 880px)": {
       marginBottom: "20px",
     },
   },

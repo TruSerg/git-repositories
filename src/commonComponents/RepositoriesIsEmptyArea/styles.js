@@ -5,7 +5,7 @@ const styles = () => ({
     minHeight: "550px",
     backgroundColor: "#E5E5E5",
 
-    ["@media (max-width: 490px)"]: {
+    "@media (max-width: 490px)": {
       minHeight: "250px",
     },
   },
@@ -21,7 +21,7 @@ const styles = () => ({
     height: "62px",
     marginBottom: "62px",
 
-    ["@media (max-width: 490px)"]: {
+    "@media (max-width: 490px)": {
       width: "56px",
       height: "42px",
       marginBottom: "42px",
@@ -32,7 +32,7 @@ const styles = () => ({
     fontSize: "22px",
     color: "#808080",
 
-    ["@media (max-width: 490px)"]: {
+    "@media (max-width: 490px)": {
       fontSize: "18px",
     },
   },
